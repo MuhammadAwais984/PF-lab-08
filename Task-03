@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    char ch;
+
+    cout << "Enter a single alphabet character: ";
+    cin >> ch;
+
+    switch (tolower(ch)) { 
+        case 'a':
+        case 'e':
+        case 'i':
+        case 'o':
+        case 'u':
+            cout << ch << " is a vowel." << endl;
+            break;
+        default:
+            if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z')) {
+                cout << ch << " is a consonant." << endl;
+            } else {
+                cout << "Invalid input. Please enter an alphabet character." << endl;
+            }
+            break;
+    }
+
+    return 0;
+}
